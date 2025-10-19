@@ -1,0 +1,17 @@
+lass Solution {
+    public int[] twoSum(int[] nums, int target) {
+       Map<Integer, Integer> mpp=new HashMap<>();
+
+       for(int i=0;i<nums.length;i++){
+        int a=nums[i];
+        int need=target-a;
+        if(mpp.containsKey(need)){
+            return new int[] {mpp.get(need), i};
+        }
+        else{
+            mpp.put(a, i);
+        }
+       } 
+       return new int[] {};
+    }
+}
